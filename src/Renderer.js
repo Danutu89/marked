@@ -23,12 +23,12 @@ module.exports = class Renderer {
     }
 
     if (!lang) {
-      return '<pre><code>'
+      return '<pre class="prettyprint"><code>'
         + (escaped ? code : escape(code, true))
         + '</code></pre>';
     }
 
-    return '<pre><code class="'
+    return '<pre><code class="prettyprint '
       + this.options.langPrefix
       + escape(lang, true)
       + '">'
